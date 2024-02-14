@@ -14,14 +14,17 @@ class NumberDisplayAdapter (_numbers: Array<Int>): RecyclerView.Adapter<NumberDi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
+        return NumberViewHolder(TextView(parent.context).apply {layoutParams = ViewGroup.LayoutParams(300, 300)})
         TODO("Not yet implemented")
     }
 
     override fun getItemCount(): Int {
+        return numbers.size
         TODO("Not yet implemented")
     }
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
+        holder.textView.setText(numbers[position])
         TODO("Not yet implemented")
     }
 
